@@ -32,8 +32,8 @@ class SideNav extends React.Component {
                   key: 2
                 },
                 {
-                  path: '/NoMatch',
-                  name: 'NoMatch',
+                  path: '/Recipe',
+                  name: 'Recipe',
                   css: 'fas fa-hashtag',
                   key: 3
                 },
@@ -95,7 +95,9 @@ class NavItem extends React.Component {
         const { active } = this.props;
         return(
             <StyledNavItem active={active}>
-                <Link to={this.props.path} className={this.props.css} onClick={this.handleClick}>
+                <Link to={this.props.path}  onClick={this.handleClick} style = {{fontSize: "20px" }}> 
+                {this.props.name}
+
                     <NavIcon></NavIcon>
                 </Link>
             </StyledNavItem>

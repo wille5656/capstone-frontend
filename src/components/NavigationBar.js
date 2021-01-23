@@ -1,6 +1,7 @@
 import React from 'react';
 import { Nav, Navbar, Form, FormControl } from 'react-bootstrap';
 import styled from 'styled-components';
+import logo from './chef.svg'
 
 const Styles = styled.div`
   .navbar { background-color: #222; }
@@ -15,18 +16,18 @@ const Styles = styled.div`
   }
   .form-center {
     position: absolute !important;
-    left: 25%;
-    right: 25%;
+    left: 30%;
+    right: 30%;
   }
 `;
 
 export const NavigationBar = () => (
   <Styles>
     <Navbar expand="lg">
-      <Navbar.Brand href="/">Recipes</Navbar.Brand>
+      <Navbar.Brand href="/"><img src={logo} width="45px" height="45px" style={{marginRight:"10px"}}/> Find Your Recipe</Navbar.Brand>
       <Navbar.Toggle aria-controls="basic-navbar-nav"/>
       <Form className="form-center">
-        <FormControl type="text" placeholder="fgfSearch" className="" />
+        <FormControl type="text" placeholder="Search for Recipe" className="" />
       </Form>
       <Navbar.Collapse id="basic-navbar-nav">
         <Nav className="ml-auto">
